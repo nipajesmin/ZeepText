@@ -3,8 +3,8 @@ import { FaRegEdit, FaTrashAlt } from "react-icons/fa";
 import { FaCloudUploadAlt, FaPlus } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 
-import { FaHome, FaBullhorn, FaEnvelope, FaAddressBook, FaCheckCircle } from "react-icons/fa";
-
+import { FaHome, FaBullhorn, FaEnvelope, FaAddressBook, FaCheckCircle,  FaClipboardList } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ContactList = () => {
     // Dummy contacts data
@@ -15,7 +15,7 @@ const ContactList = () => {
             phone: "5738901234",
             email: "olvia@GiMailShirt.com",
             notes: "olvia@GiMailShirt.com",
-            image: "/public/image.png",
+            image: "/image.png",
         },
         {
             id: 2,
@@ -23,7 +23,7 @@ const ContactList = () => {
             phone: "4521345436",
             email: "Phoenix@GiMailShirt.com",
             notes: "Phoenix@GiMailShirt.com",
-            image: "/public/image.png",
+            image: "/image.png",
         },
         {
             id: 3,
@@ -31,7 +31,7 @@ const ContactList = () => {
             phone: "4532454321",
             email: "Lara@GiMailShirt.com",
             notes: "Lara@GiMailShirt.com",
-            image: "/public/image.png",
+            image: "/image.png",
         },
     ];
 
@@ -67,6 +67,17 @@ const ContactList = () => {
                             <FaCheckCircle />
                             <span>Compliance</span>
                         </div>
+                       
+                        <Link to="/importContacts" className="flex items-center space-x-2 cursor-pointer hover:text-purple-700">
+                            <FaCloudUploadAlt />
+                            <span>Import Contacts</span>
+                        </Link>
+
+                        
+                        <Link to="/mapField" className="flex items-center space-x-2 cursor-pointer hover:text-purple-700">
+                            <FaClipboardList />
+                            <span>Map Fields</span>
+                        </Link>
                     </nav>
 
                 </div>
@@ -74,7 +85,7 @@ const ContactList = () => {
                 {/* Support and Profile Section */}
                 <div className="flex items-center space-x-2 mt-4 border-t pt-4">
                     <img
-                        src="/public/image.png"
+                        src="/image.png"
                         alt="User Avatar"
                         className="w-8 h-8 rounded-full object-cover"
                     />
